@@ -167,10 +167,8 @@ def get_route(hostname):
                     tracelist1.append(str(int(round(timeElapsed, 0)))+'ms')
                     tracelist1.append(str(addr[0]))
                     tracelist1.append(host)
-                    #print(ttl)
                     tracelist2.append(tracelist1)
                     tracelist1 = []
-                    #print(tracelist2)
                     if addr[0] == destAddr:
                         return tracelist2
                     #Fill in end
@@ -185,4 +183,6 @@ def get_route(hostname):
             finally:
                 mySocket.close()
 
-get_route('google.com')
+    return tracelist2
+
+#get_route('google.com')
